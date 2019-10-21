@@ -1,0 +1,11 @@
+
+
+!xform objects/Piso.rad
+
+!xform objects/Pared.rad
+
+!xform objects/Techo.rad
+
+!xform objects/Ventana.rad
+
+!xform objects/Overhang.rad

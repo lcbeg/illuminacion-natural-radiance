@@ -1,0 +1,7 @@
+oconv materials.rad habitacion.rad > modelo.oct
+
+gendaylit 09 21 +15 -a 55.67 -W 245 189  | genskyvec -m 4 > vector_cielo.skv
+
+rfluxmtx < sensores.pts -I+ -v -ab 7 -ad 4096 -as 2048 -aa 0.1 -ar 256 -dt 0.03 -ds 0.02 -lw 1.52e-06 - cielo_r4.rad  -i modelo.oct > matriz_dc.mtx
+
+dctimestep matriz_dc.mtx vector_cielo.skv  | rmtxop -fa -c 47.7 119.9 11 -
